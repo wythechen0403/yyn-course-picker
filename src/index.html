@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>英語腦選課</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@500;600;900&display=swap" rel="stylesheet">
+<style>
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}img{max-width:100%}
+/* Layout: one narrow column (phone first), sticky header with seal mark, sticky bottom selection bar */
+:root{
+  --bg:#F7F4EE; --surface:#FFFDF9; --ink:#1F2328; --muted:#6A665E; --line:#E4DED3;
+  --seal:#B23A2B; --seal-ink:#FBF7F0; --chip:#EFE9DE; --focus:#1F4E6B;
+  --serif:"Noto Serif TC","Songti TC",serif; --sans:"Noto Sans TC","PingFang TC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#17181A; --surface:#202124; --ink:#ECE8E1; --muted:#A39E95; --line:#34353A;
+  --seal:#C4483A; --seal-ink:#FBF7F0; --chip:#2B2C30; --focus:#8DB8D4; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17181A; --surface:#202124; --ink:#ECE8E1; --muted:#A39E95; --line:#34353A;
+  --seal:#C4483A; --seal-ink:#FBF7F0; --chip:#2B2C30; --focus:#8DB8D4; color-scheme:dark}
+html,body{background:var(--bg);color:var(--ink)}
+body{font-family:var(--sans);font-size:15px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 120px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .in{max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:10px;display:flex;align-items:center;gap:10px}
+.mark{display:flex;flex-direction:column;align-items:center;gap:1px;background:var(--seal);color:var(--seal-ink);font-family:var(--serif);font-weight:900;font-size:11px;line-height:1;padding:5px 4px;border-radius:3px}
+.brand{font-family:var(--serif);font-weight:600;font-size:17px;flex:1}
+.fmt{font-size:12px;border:1px solid var(--line);border-radius:99px;padding:4px 10px;background:var(--surface);color:var(--ink);cursor:pointer}
+h1{font-family:var(--serif);font-size:24px;line-height:1.35;margin:28px 0 6px;text-wrap:balance}
+h2{font-family:var(--serif);font-size:19px;margin:24px 0 6px;text-wrap:balance}
+.lead{color:var(--muted);margin:0 0 18px}
+.note{font-size:12.5px;color:var(--muted)}
+.stack{display:flex;flex-direction:column;gap:12px}
+.entry{display:flex;gap:14px;align-items:flex-start;text-align:left;width:100%;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:inherit;cursor:pointer}
+.entry b{display:block;font-family:var(--serif);font-size:17px;font-weight:600}
+.entry span{font-size:13px;color:var(--muted)}
+.entry .num{font-family:var(--serif);font-weight:900;color:var(--seal);font-size:20px;line-height:1.2;min-width:20px}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:14px;padding:8px 14px;border-radius:99px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip small{font-size:12px;opacity:.75}
+.lvl{display:flex;flex-direction:column;gap:8px}
+.lvl .chip{border-radius:12px;text-align:left;padding:12px 14px}
+.lvl .chip b{display:block;font-size:15px}
+.q{margin:22px 0 0}
+.q h2{margin:0 0 10px;font-size:17px}
+.step{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+input[type=text],input[type=date],input[type=time],select{font:inherit;font-size:16px;width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
+label.f{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--muted)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{font:inherit;font-weight:500;padding:12px 18px;border-radius:10px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.lesson{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.lesson.sel{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink)}
+.lh{display:flex;gap:10px;align-items:flex-start}
+.lh .t{flex:1;min-width:0}
+.code{font-family:var(--serif);font-weight:900;font-size:13px;letter-spacing:.04em}
+.ttl{font-family:var(--serif);font-weight:600;font-size:17px;line-height:1.35}
+.en{font-size:13px;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.tg{font-size:12px;padding:2px 9px;border-radius:99px;background:var(--chip)}
+.tg.match{background:var(--ink);color:var(--bg)}
+.goal{font-size:14px}
+.ph{font-size:13px;color:var(--muted);font-style:italic}
+.links{display:flex;gap:8px;flex-wrap:wrap}
+.links a{font-size:13px;color:var(--ink);text-decoration:none;border:1px solid var(--line);padding:6px 12px;border-radius:8px}
+.pick{flex:none;font:inherit;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.pick[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+.bar .in{max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:10px;display:flex;align-items:center;gap:12px}
+.bar .c{flex:1;font-size:14px}
+.draft{font-size:11px;color:var(--seal);border:1px solid var(--seal);border-radius:4px;padding:0 5px;margin-left:6px;vertical-align:2px}
+.out{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:16px}
+.out img{width:100%;max-width:360px;height:auto;border-radius:6px;box-shadow:0 4px 18px #0000001f}
+.seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.seg button{flex:1;font:inherit;font-size:14px;padding:9px 6px;border:0;background:var(--surface);color:var(--ink);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.seg button:disabled{opacity:.35}
+.sched{display:flex;flex-direction:column;gap:8px}
+.sched div{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;font-size:13px}
+.empty{padding:18px;border:1px dashed var(--line);border-radius:12px;color:var(--muted);font-size:14px}
+@media (prefers-reduced-motion:no-preference){.lesson,.entry,.chip{transition:border-color .15s,background .15s}}
+</style>
+</head>
+<body>
+<header><div class="in">
+  <div class="mark" aria-hidden="true"><span>英</span><span>語</span><span>腦</span></div>
+  <div class="brand">選課</div>
+  <button class="fmt" id="fmtBtn" hidden></button>
+</div></header>
+
+<main class="wrap" id="app"></main>
+<div class="bar" id="bar" hidden><div class="in"><div class="c" id="barText"></div><button class="btn" id="barBtn">產生圖卡</button></div></div>
+
+<script>
+/* ---------- 資料（初稿，5 堂試做） ---------- */
+const THEMES={
+ travel:{n:"旅行出國",e:"✈️",ask:"出國旅行",bg:"#EDF3F6",band:"#1F4E6B"},
+ life:{n:"日常生活",e:"🏠",ask:"日常生活大小事",bg:"#F6F1E8",band:"#6B4A2B"},
+ work:{n:"工作職場",e:"💼",ask:"工作與職場",bg:"#F0F2F5",band:"#23324A"},
+ social:{n:"生活分享與人際",e:"💬",ask:"和人聊天、分享生活",bg:"#F6EFF1",band:"#7A3B4E"},
+ culture:{n:"文化與興趣",e:"🎌",ask:"文化與興趣",bg:"#F2F0F7",band:"#4B3B7A"},
+ movie:{n:"電影英文",e:"🎬",ask:"看電影學英文",bg:"#F5F1E6",band:"#6E5418"},
+ grow:{n:"自我成長與思考",e:"🌱",ask:"自我成長與閱讀",bg:"#EDF2EE",band:"#2F5A44"}
+};
+const LEVELS=["Basic","Intermediate","Advanced"];
+const LEVEL_DESC={
+ Basic:"能用簡單句子應付點餐、問路、看醫生，但話一長就卡住。",
+ Intermediate:"能聊自己的生活和經驗，但字彙不夠多，母語者講快就跟不上。",
+ Advanced:"能聽懂訪談、演講和電影對白，想練更精準的表達和觀點。"
+};
+const LESSONS=[
+ {id:"B06",zh:"機場轉機",en:"Ready for Takeoff?",level:"Basic",themes:["travel"],goal:"轉機時開口問路、出示機票、找到登機門。",ph:"I need to change planes. ／ May I see your ticket?",pages:26,key:"1_Y7T-ZyHI69GLE2j8shJAsj1JGsn02wq",pptx:"1ZvfqRMTlNX6fJUd3SrPOreF_9cFGcxnF"},
+ {id:"B05",zh:"餐廳點餐",en:"Ready to Order?",level:"Basic",themes:["travel","life"],goal:"點主餐、問今日特餐，選配菜和飲料。",ph:"What is today’s special? ／ I’ll have a baked potato.",pages:15,key:"1o7hGpFV6SVLST6RQLYQ1EzxZ1z7rpnhw",pptx:"1y-DlpquWrTojZYX3weXJdOjA3H4ed51j"},
+ {id:"I06",zh:"聊暑假與家庭安排",en:"Long Summer Days",level:"Intermediate",themes:["social","life"],goal:"聊假期和孩子的安排，說出自己比較喜歡哪一種。",ph:"When it comes to holidays, I like … better.",pages:20,key:"1W4Vhd65ERvOgoDb4bklGJCilxIKEHxR2",pptx:"1n03xqgOlicesX5LoN0Ln5m4oIAZ0y7R3"},
+ {id:"A04",zh:"哈利波特作者訪談",en:"Unmasking Harry Potter",level:"Advanced",themes:["culture"],goal:"聽懂作家訪談，練習說明原因、表達看法。",ph:"Basically, I believe the books provide dreams for people.",pages:14,key:"1Y4qrVcW7n2YATp-me-_JySfxibXpV_MV",pptx:"1k2R1uk5joHSdb9mQE_0KgiQd91D9aZ-2"},
+ {id:"H02",zh:"餵養你的心智",en:"Feed Your Mind with Wisdom",level:"Seven Habits",themes:["grow"],goal:"談閱讀和自我成長，用英文說出自己的生活原則。",ph:"Your mind is like a garden.",pages:24,key:"1ojktjTUbyPc8wYP6XEaZgA3LjWc1JfmT",pptx:"1jZbCKwBHTkzwFH-fw1ARxRP0qndDYy4O"}
+];
+const QUOTES={
+ travel:[["Every trip starts with one brave sentence.","每段旅程，都從一句勇敢開口開始。"],["Ask once, and the world gets bigger.","敢開口問一次，世界就變大了。"]],
+ life:[["Use English where you live.","把英文用在每天的生活裡。"],["A little every day goes a long way.","每天一點點，就能走很遠。"]],
+ work:[["Say it clearly, and people will listen.","說得清楚，別人就會聽。"]],
+ social:[["Every story you share opens a door.","每分享一個故事，就多打開一扇門。"]],
+ culture:[["Curiosity is the best teacher.","好奇心，是最好的老師。"]],
+ movie:[["Learn the lines, live the scene.","學會台詞，走進那一幕。"]],
+ grow:[["Small habits, big life.","小習慣，成就大人生。"],["Feed your mind every day.","每天替心智補一點養分。"]]
+};
+const SLOTS=[["平日早上","平日早"],["平日下午","平日午"],["平日晚上","平日晚"],["週末","週末"]];
+const WD=["日","一","二","三","四","五","六"];
+
+/* ---------- 狀態 ---------- */
+const S={mode:null,picked:[],themes:[],main:null,level:null,levelBy:null,goal:"",slots:[],filters:{level:null,theme:null},step:0,quoteIx:0};
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+let FORMAT=store.get("yyn-format");
+const $=s=>document.querySelector(s), app=$("#app");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const isCoach=()=>S.mode==="coach"||S.mode==="browse";
+
+function fmtBtn(){const b=$("#fmtBtn");b.hidden=!(isCoach()&&FORMAT);b.textContent=FORMAT==="key"?"Keynote ⇄":"PPT ⇄";}
+$("#fmtBtn").onclick=()=>{FORMAT=FORMAT==="key"?"pptx":"key";store.set("yyn-format",FORMAT);fmtBtn();rerender&&rerender();};
+let rerender=null;
+
+/* ---------- 首頁 ---------- */
+function home(){
+ Object.assign(S,{mode:null,picked:[],themes:[],main:null,level:null,levelBy:null,goal:"",slots:[],step:0});
+ rerender=null;fmtBtn();bar();
+ app.innerHTML=`<h1>今天想怎麼找課？</h1><p class="lead">三種方式都會找到適合的英語腦課程，最後可以產生一張圖卡留存。</p>
+ <div class="stack">
+  <button class="entry" data-go="coach"><div><b>教練帶學生確認需求</b><span>一起回答幾個問題，直接列出候選課程和教材。</span></div></button>
+  <button class="entry" data-go="student"><div><b>學生自己確認需求</b><span>回答問題後產生「選課意願卡」，截圖傳給教練。</span></div></button>
+  <button class="entry" data-go="browse"><div><b>直接瀏覽課程</b><span>已經知道要找什麼時，用程度和主題篩選。</span></div></button>
+ </div>
+ <p class="note" style="margin-top:20px">雛形：目前只放 5 堂試做課程，卡片內容為初稿。</p>`;
+ app.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>start(b.dataset.go));
+}
+function start(m){S.mode=m;if(m!=="student"&&!FORMAT)return chooseFormat(()=>start(m));fmtBtn();m==="browse"?browse():needs();}
+function chooseFormat(next){
+ app.innerHTML=`<h1>教材用哪一種格式？</h1><p class="lead">之後課程卡上的教材連結只會顯示這個格式。這支裝置會記住你的選擇，右上角可以隨時切換。</p>
+ <div class="stack"><button class="entry" data-f="key"><div><b>Keynote</b><span>Mac、iPad 上課用</span></div></button>
+ <button class="entry" data-f="pptx"><div><b>PowerPoint</b><span>Windows 電腦上課用</span></div></button></div>`;
+ app.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{FORMAT=b.dataset.f;store.set("yyn-format",FORMAT);next();});
+}
+
+/* ---------- 確認需求 ---------- */
+function needs(){
+ rerender=null;bar();
+ const coach=S.mode==="coach";
+ const steps=coach?["use","main","level","goal"]:["use","main","levelby","goal","slot"];
+ const active=steps.filter(s=>s!=="main"||S.themes.length>1);
+ if(S.step>=active.length)return results();
+ const st=active[S.step];
+ let body="",ok=true;
+ if(st==="use"){
+  body=`<h2>${coach?"學員":"你"}想把英文用在哪裡？</h2><p class="note">可以複選。</p><div class="chips">${Object.entries(THEMES).map(([k,t])=>`<button class="chip" data-t="${k}" aria-pressed="${S.themes.includes(k)}">${t.e} ${t.ask}</button>`).join("")}</div>`;
+  ok=S.themes.length>0;
+ }else if(st==="main"){
+  body=`<h2>其中最想先加強哪一個？</h2><p class="note">圖卡會用這個主題的顏色。</p><div class="chips">${S.themes.map(k=>`<button class="chip" data-m="${k}" aria-pressed="${S.main===k}">${THEMES[k].e} ${THEMES[k].ask}</button>`).join("")}</div>`;
+  ok=!!S.main;
+ }else if(st==="level"){
+  body=`<h2>教練判斷的程度</h2><div class="lvl">${LEVELS.map(l=>`<button class="chip" data-l="${l}" aria-pressed="${S.level===l}"><b>${l}</b><small>${LEVEL_DESC[l]}</small></button>`).join("")}</div>`;
+  ok=!!S.level;
+ }else if(st==="levelby"){
+  body=`<h2>程度要怎麼評估？</h2><div class="chips"><button class="chip" data-lb="coach" aria-pressed="${S.levelBy==="coach"}">請教練評估</button><button class="chip" data-lb="self" aria-pressed="${S.levelBy==="self"}">我自己評估</button></div>
+  ${S.levelBy==="self"?`<div class="q"><h2>哪一個最像你現在的狀態？<span class="draft">描述為草稿</span></h2><div class="lvl">${LEVELS.map(l=>`<button class="chip" data-l="${l}" aria-pressed="${S.level===l}"><b>${l}</b><small>${LEVEL_DESC[l]}</small></button>`).join("")}</div></div>`:""}`;
+  ok=S.levelBy==="coach"||(S.levelBy==="self"&&!!S.level);
+ }else if(st==="goal"){
+  body=`<h2>用一句話說說${coach?"學員的":"你的"}目標</h2><p class="note">選填，會印在圖卡上。</p><input type="text" id="goal" maxlength="24" placeholder="例如：明年想去歐洲自助旅行" value="${esc(S.goal)}">`;
+ }else if(st==="slot"){
+  body=`<h2>希望什麼時段上課？</h2><p class="note">可以複選，教練會再和你確認。</p><div class="chips">${SLOTS.map(([a])=>`<button class="chip" data-s="${a}" aria-pressed="${S.slots.includes(a)}">${a}</button>`).join("")}</div>`;
+  ok=S.slots.length>0;
+ }
+ app.innerHTML=`<p class="step" style="margin-top:24px">確認需求 ${S.step+1} / ${active.length}</p><div class="q">${body}</div>
+ <div class="actions"><button class="btn ghost" id="back">上一步</button><button class="btn" id="next" ${ok?"":"disabled"}>${S.step===active.length-1?"看推薦課程":"下一步"}</button></div>`;
+ app.querySelectorAll("[data-t]").forEach(b=>b.onclick=()=>{const k=b.dataset.t;S.themes=S.themes.includes(k)?S.themes.filter(x=>x!==k):[...S.themes,k];if(!S.themes.includes(S.main))S.main=S.themes[0]||null;needs();});
+ app.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{S.main=b.dataset.m;needs();});
+ app.querySelectorAll("[data-l]").forEach(b=>b.onclick=()=>{S.level=b.dataset.l;needs();});
+ app.querySelectorAll("[data-lb]").forEach(b=>b.onclick=()=>{S.levelBy=b.dataset.lb;if(S.levelBy==="coach")S.level=null;needs();});
+ app.querySelectorAll("[data-s]").forEach(b=>b.onclick=()=>{const k=b.dataset.s;S.slots=S.slots.includes(k)?S.slots.filter(x=>x!==k):[...S.slots,k];needs();});
+ const g=$("#goal");if(g)g.oninput=()=>S.goal=g.value;
+ $("#back").onclick=()=>{if(S.step===0)home();else{S.step--;needs();}};
+ $("#next").onclick=()=>{if(S.themes.length===1)S.main=S.themes[0];S.step++;needs();};
+}
+function score(l){
+ const t=l.themes.filter(x=>S.themes.includes(x)).length;
+ if(!t)return -1;
+ const lv=!S.level||l.level==="Seven Habits"||l.level===S.level?2:0;
+ return lv*10+t+(l.themes.includes(S.main)?1:0);
+}
+function results(){
+ const list=LESSONS.map(l=>[score(l),l]).filter(x=>x[0]>=0).sort((a,b)=>b[0]-a[0]).slice(0,5).map(x=>x[1]);
+ S.picked=S.picked.filter(id=>list.some(l=>l.id===id));
+ const coach=S.mode==="coach";
+ rerender=results;
+ app.innerHTML=`<h1>推薦課程</h1><p class="lead">${coach?"勾選要排的課，再產生「課程安排卡」。":"勾選想上的課，再產生「選課意願卡」傳給教練。"}</p>
+ <div class="stack">${list.length?list.map(l=>lessonCard(l,coach)).join(""):`<div class="empty">目前沒有符合的課程。可以回上一步多選幾個用途。</div>`}</div>
+ <div class="actions"><button class="btn ghost" id="redo">重新確認需求</button></div>`;
+ bindPick();$("#redo").onclick=()=>{S.step=0;needs();};bar();
+}
+
+/* ---------- 瀏覽 ---------- */
+function browse(){
+ rerender=browse;
+ const f=S.filters;
+ const list=LESSONS.filter(l=>(!f.level||l.level===f.level)&&(!f.theme||l.themes.includes(f.theme)));
+ app.innerHTML=`<h1>直接瀏覽課程</h1>
+ <div class="stack"><div class="chips">${["全部程度",...LEVELS,"Seven Habits"].map((l,i)=>`<button class="chip" data-fl="${i?l:""}" aria-pressed="${(f.level||"")===(i?l:"")}">${l}</button>`).join("")}</div>
+ <div class="chips">${[["","全部主題"],...Object.entries(THEMES).map(([k,t])=>[k,t.e+" "+t.n])].map(([k,n])=>`<button class="chip" data-ft="${k}" aria-pressed="${(f.theme||"")===k}">${n}</button>`).join("")}</div></div>
+ <p class="note" style="margin:14px 0 8px">${list.length} 堂課</p>
+ <div class="stack">${list.length?list.map(l=>lessonCard(l,true)).join(""):`<div class="empty">沒有符合這個組合的課。換個程度或主題試試。</div>`}</div>
+ <div class="actions"><button class="btn ghost" id="home">回首頁</button></div>`;
+ app.querySelectorAll("[data-fl]").forEach(b=>b.onclick=()=>{f.level=b.dataset.fl||null;browse();});
+ app.querySelectorAll("[data-ft]").forEach(b=>b.onclick=()=>{f.theme=b.dataset.ft||null;browse();});
+ $("#home").onclick=home;bindPick();bar();
+}
+
+/* ---------- 課程卡 ---------- */
+function lessonCard(l,showLinks){
+ const sel=S.picked.includes(l.id);
+ const id=FORMAT==="key"?l.key:l.pptx;
+ return `<article class="lesson ${sel?"sel":""}">
+  <div class="lh"><div class="t"><div class="code">${l.id}・${l.level}</div><div class="ttl">${l.zh}</div><div class="en">${l.en}</div></div>
+  <button class="pick" data-p="${l.id}" aria-pressed="${sel}">${sel?"已選":"選這堂"}</button></div>
+  <div class="meta">${S.level&&l.level!=="Seven Habits"&&l.level!==S.level?`<span class="tg">程度不同</span>`:""}${l.themes.map(t=>`<span class="tg ${S.themes.includes(t)?"match":""}">${THEMES[t].e} ${THEMES[t].n}</span>`).join("")}<span class="tg">約 ${l.pages} 頁投影片</span></div>
+  <div class="goal">${l.goal}<span class="draft">初稿</span></div>
+  <div class="ph">${l.ph}</div>
+  ${showLinks?`<div class="links"><a href="https://drive.google.com/file/d/${id}/view" target="_blank" rel="noopener">開啟 ${FORMAT==="key"?"Keynote":"PPT"} 教材 ↗</a></div>`:""}
+ </article>`;
+}
+function bindPick(){app.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>{const k=b.dataset.p;S.picked=S.picked.includes(k)?S.picked.filter(x=>x!==k):[...S.picked,k];rerender&&rerender();});}
+function bar(){
+ const show=!!S.mode&&S.picked.length>0&&!!rerender;
+ $("#bar").hidden=!show;
+ if(show){$("#barText").textContent=`已選 ${S.picked.length} 堂`;$("#barBtn").onclick=()=>{F.kind=S.picked.length>1?"schedule":"single";F.colorTheme=null;cardForm();};}
+}
+
+/* ---------- 圖卡表單 ---------- */
+const F={student:"",coach:"",kind:"single",date:"",time:"19:00",dates:{},wd:"4",start:"",colorTheme:null};
+function cardForm(){
+ rerender=null;$("#bar").hidden=true;
+ const coach=S.mode!=="student";
+ const lessons=S.picked.map(id=>LESSONS.find(l=>l.id===id));
+ if(lessons.length>1&&F.kind==="single")F.kind="schedule";
+ const themeKey=F.colorTheme||S.main||lessons[0].themes[0];
+ F.colorTheme=themeKey;
+ let timeHtml="";
+ if(coach){
+  timeHtml=`<div class="q"><h2>上課時間</h2><div class="seg" role="group">
+   <button data-k="single" aria-pressed="${F.kind==="single"}" ${lessons.length>1?"disabled":""}>單堂</button>
+   <button data-k="schedule" aria-pressed="${F.kind==="schedule"}">一段課表</button>
+   <button data-k="period" aria-pressed="${F.kind==="period"}">一個期間</button></div>
+   <div style="margin-top:12px">${
+    F.kind==="single"?`<div class="row2"><label class="f">日期<input type="date" id="date" value="${F.date}"></label><label class="f">時間<input type="time" id="time" value="${F.time}"></label></div>`:
+    F.kind==="schedule"?`<div class="sched">${lessons.map(l=>`<div><span>${l.id} ${l.zh}</span><input type="date" data-d="${l.id}" value="${F.dates[l.id]||""}"></div>`).join("")}</div><label class="f" style="margin-top:10px">時間<input type="time" id="time" value="${F.time}"></label>`:
+    `<div class="row2"><label class="f">每週<select id="wd">${[1,2,3,4,5,6,0].map(d=>`<option value="${d}" ${String(d)===F.wd?"selected":""}>週${WD[d]}</option>`).join("")}</select></label><label class="f">時間<input type="time" id="time" value="${F.time}"></label></div><label class="f" style="margin-top:10px">開始日期<input type="date" id="start" value="${F.start}"></label>`
+   }</div></div>`;
+ }
+ app.innerHTML=`<h1>${coach?"課程安排卡":"選課意願卡"}</h1><p class="lead">${lessons.length} 堂課・${lessons.length>1?"9:16 直式":"4:5 直式"}</p>
+ <div class="stack">
+  <label class="f">學員稱呼<input type="text" id="stu" maxlength="10" placeholder="例如：林小姐" value="${esc(F.student)}"></label>
+  ${coach?`<label class="f">教練<input type="text" id="coa" maxlength="10" placeholder="例如：Amy" value="${esc(F.coach)}"></label>`:""}
+  <label class="f">卡片主題色<select id="ct">${Object.entries(THEMES).map(([k,t])=>`<option value="${k}" ${k===themeKey?"selected":""}>${t.e} ${t.n}</option>`).join("")}</select></label>
+ </div>${timeHtml}
+ <div class="actions"><button class="btn ghost" id="back">回到課程</button><button class="btn" id="make">產生圖卡</button></div>`;
+ const v=id=>$(id)&&$(id).value;
+ const save=()=>{F.student=v("#stu")||"";if(coach)F.coach=v("#coa")||"";F.colorTheme=v("#ct");if($("#date"))F.date=v("#date");if($("#time"))F.time=v("#time");if($("#wd"))F.wd=v("#wd");if($("#start"))F.start=v("#start");app.querySelectorAll("[data-d]").forEach(i=>F.dates[i.dataset.d]=i.value);};
+ app.querySelectorAll("[data-k]").forEach(b=>b.onclick=()=>{save();F.kind=b.dataset.k;cardForm();});
+ $("#back").onclick=()=>{save();S.mode==="browse"?browse():results();};
+ $("#make").onclick=()=>{save();makeCard(lessons,coach);};
+}
+
+/* ---------- 圖卡繪製（canvas） ---------- */
+const md=s=>{if(!s)return"";const [y,m,d]=s.split("-").map(Number);return `${m}/${d}`};
+const wdOf=s=>{if(!s)return"";const [y,m,d]=s.split("-").map(Number);return "週"+WD[new Date(y,m-1,d).getDay()]};
+function cardData(lessons,coach){
+ const n=lessons.length, nm=l=>`${l.id} ${l.zh}`;
+ const q=QUOTES[F.colorTheme]||QUOTES.grow, quote=q[S.quoteIx%q.length];
+ const d={tall:n>1,arr:coach,theme:F.colorTheme,quote,student:F.student||"學員",coach:F.coach||"",lessons};
+ if(!coach){
+  const sl=S.slots.length?S.slots:["平日晚上"];const short=SLOTS.find(x=>x[0]===sl[0])[1];
+  d.big=short;d.w="";d.sub=sl.length>1?`也可以：${sl.slice(1).join("・")}`:"希望上課時段";
+  d.levelLine=S.levelBy==="self"&&S.level?`自評 ${S.level}`:"程度請教練評估";
+  d.goal=S.goal;d.rows=lessons.map(l=>["推薦",nm(l)]);d.les1=`推薦 ${nm(lessons[0])}`;
+ }else if(F.kind==="single"){
+  d.big=md(F.date)||"日期";d.w=wdOf(F.date);d.sub=F.time||"";d.les1=nm(lessons[0]);
+ }else if(F.kind==="schedule"){
+  const ds=lessons.map(l=>F.dates[l.id]).filter(Boolean).sort();
+  const first=ds[0];d.big=first?`${Number(first.split("-")[1])}月`:"課表";d.w=`${n} 堂`;
+  const wds=[...new Set(ds.map(wdOf))];d.sub=(wds.length===1?wds[0]+" ":"")+(F.time||"");
+  d.rows=lessons.map(l=>[md(F.dates[l.id])||"—",nm(l)]).sort((a,b)=>(F.dates[a[1].split(" ")[0]]||"z").localeCompare(F.dates[b[1].split(" ")[0]]||"z"));
+  if(n===1)d.les1=nm(lessons[0]);
+ }else{
+  d.big="每週"+WD[Number(F.wd)];d.w="";d.sub=`${F.start?md(F.start)+" 起・":""}${F.time||""}`;
+  d.rows=lessons.map((l,i)=>[`第${i+1}堂`,nm(l)]);if(n===1)d.les1=nm(lessons[0]);
+ }
+ return d;
+}
+function rr(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+function fit(ctx,t,w){if(ctx.measureText(t).width<=w)return t;while(t.length&&ctx.measureText(t+"…").width>w)t=t.slice(0,-1);return t+"…";}
+async function draw(d){
+ const W=200,H=d.tall?356:250,K=1080/W, th=THEMES[d.theme];
+ const SANS='"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif',SERIF='"Noto Serif TC","Songti TC","PMingLiU",serif';
+ const texts=[d.big,d.w,d.sub,th.n,d.student,d.coach,d.levelLine||"",d.goal||"",d.les1||"",(d.rows||[]).flat().join(""),d.quote.join(""),"英語腦課程安排我的選課意願學員教練・"].join("");
+ try{await Promise.all([`900 38px ${SANS}`,`700 14px ${SANS}`,`500 11px ${SANS}`,`400 10px ${SANS}`,`600 12px ${SERIF}`,`900 12px ${SERIF}`,`500 10px ${SERIF}`].map(f=>document.fonts.load(f.replace(/,.*$/,""),texts)));}catch(e){}
+ const c=document.createElement("canvas");c.width=1080;c.height=Math.round(H*K);
+ const x=c.getContext("2d");x.scale(K,K);x.textBaseline="alphabetic";
+ x.fillStyle=th.bg;x.fillRect(0,0,W,H);
+ const bandY=(H-88)/2;
+ // top zone
+ x.fillStyle=th.band;x.font=`500 10px ${SANS}`;x.fillText(`${th.e} ${th.n}`,14,24);
+ const tag=d.arr?"課程安排":"我的選課意願";x.font=`500 9.5px ${SANS}`;const tw=x.measureText(tag).width+16;
+ rr(x,W-14-tw,13,tw,16,8);
+ if(d.arr){x.fillStyle=th.band;x.fill();x.fillStyle=th.bg;}else{x.strokeStyle=th.band;x.lineWidth=.8;x.stroke();x.fillStyle=th.band;}
+ x.fillText(tag,W-14-tw+8,24.5);
+ if(d.tall){
+  x.fillStyle=th.band;x.font=`400 10.5px ${SANS}`;
+  const lines=[`學員 ${d.student}`,d.arr?(d.coach?`教練 ${d.coach}`:""):d.levelLine,(!d.arr&&d.goal)?d.goal:""].filter(Boolean);
+  lines.forEach((t,i)=>x.fillText(fit(x,t,W-28),14,bandY-12-(lines.length-1-i)*16));
+ }
+ // band
+ if(d.arr){x.fillStyle=th.band;x.fillRect(0,bandY,W,88);}else{x.fillStyle=th.band+"1F";x.fillRect(0,bandY,W,88);}
+ const fg=d.arr?th.bg:th.band;
+ x.fillStyle=fg;x.font=`900 38px ${SANS}`;
+ let big=d.big;const bw=Math.min(x.measureText(big).width,W-16-58);
+ x.fillText(fit(x,big,W-16-58),16,bandY+48);
+ if(d.w){x.font=`700 14px ${SANS}`;x.fillText(d.w,16+bw+6,bandY+48);}
+ x.font=`400 11px ${SANS}`;x.globalAlpha=.9;x.fillText(fit(x,d.sub,W-16-58),16,bandY+70);x.globalAlpha=1;
+ // seal
+ const sw=26,sh=54,sx=W-14-sw,sy=bandY+(88-sh)/2;rr(x,sx,sy,sw,sh,4);x.fillStyle="#B23A2B";x.fill();
+ x.fillStyle="#FBF7F0";x.font=`900 12px ${SERIF}`;x.textAlign="center";["英","語","腦"].forEach((ch,i)=>x.fillText(ch,sx+sw/2,sy+18+i*15));x.textAlign="left";
+ // bottom
+ const by=bandY+88, bottom=H-12;
+ x.fillStyle=th.band;
+ const qy=bottom-15;
+ x.globalAlpha=.75;x.font=`500 9.5px ${SERIF}`;x.fillText(fit(x,d.quote[0],W-28),14,qy);x.fillText(fit(x,d.quote[1],W-28),14,qy+14);x.globalAlpha=1;
+ if(!d.tall){
+  x.font=`600 11.5px ${SERIF}`;x.fillText(fit(x,d.les1,W-28),14,by+20);
+  x.font=`400 10px ${SANS}`;x.fillText(fit(x,`學員 ${d.student}・${d.arr?(d.coach?"教練 "+d.coach:"英語腦"):d.levelLine}`,W-28),14,by+36);
+ }else{
+  x.globalAlpha=.6;x.fillRect(14,by+14,W-28,.6);x.globalAlpha=1;
+  (d.rows||[]).slice(0,6).forEach((r,i)=>{const y=by+32+i*17;x.font=`700 10px ${SANS}`;x.fillText(r[0],14,y);x.font=`400 10px ${SANS}`;x.fillText(fit(x,r[1],W-28-46),60,y);});
+ }
+ return c;
+}
+async function makeCard(lessons,coach){
+ const d=cardData(lessons,coach);
+ app.innerHTML=`<h1>${coach?"課程安排卡":"選課意願卡"}</h1><p class="lead">圖卡產生中…</p>`;
+ const c=await draw(d);
+ const url=c.toDataURL("image/png");
+ app.innerHTML=`<h1>${coach?"課程安排卡":"選課意願卡"}</h1>
+ <p class="lead">${coach?"按「儲存圖卡」存進相簿，再用 LINE 傳給學員。":"按「儲存圖卡」存進相簿，再用 LINE 傳給教練。"}也可以長按圖片儲存。</p>
+ <div class="out"><img id="cardImg" src="${url}" alt="${coach?"課程安排卡":"選課意願卡"}，${esc(d.big)}"></div>
+ <div class="actions"><button class="btn" id="save">儲存圖卡</button><button class="btn ghost" id="q">換一句金句</button><button class="btn ghost" id="edit">修改內容</button><button class="btn" id="home">完成</button></div>`;
+ $("#q").onclick=()=>{S.quoteIx++;makeCard(lessons,coach);};
+ const fname=`英語腦_${coach?"課程安排":"選課意願"}_${(d.student||"").replace(/[\\/:*?"<>|\s]/g,"")}_${d.big.replace(/[\/\s]/g,"-")}.png`;
+ $("#save").onclick=async()=>{
+  const blob=await new Promise(r=>c.toBlob(r,"image/png"));const file=new File([blob],fname,{type:"image/png"});
+  try{if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file]});return;}}catch(e){if(e&&e.name==="AbortError")return;}
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=fname;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1000);
+ };
+ $("#edit").onclick=cardForm;$("#home").onclick=home;
+}
+
+home();
+</script>
+</body>
+</html>
