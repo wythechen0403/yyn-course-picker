@@ -145,11 +145,10 @@ let rerender=null;
 function home(){
  Object.assign(S,{mode:null,picked:[],themes:[],main:null,level:null,levelBy:null,goal:"",slots:[],step:0,filters:{level:null,theme:null}});
  rerender=null;fmtBtn();bar();
- app.innerHTML=`<h1>今天想怎麼找課？</h1><p class="lead">三種方式都會找到適合的英語腦課程，最後可以產生一張圖卡留存。</p>
+ app.innerHTML=`<h1>今天想怎麼找課？</h1><p class="lead">選好課程後，可以產生一張課程安排卡給學員留存。</p>
  <div class="stack">
-  <button class="entry" data-go="coach"><div><b>教練帶學生確認需求</b><span>一起回答幾個問題，直接列出候選課程和教材。</span></div></button>
-  <button class="entry" data-go="student"><div><b>學生自己確認需求</b><span>回答問題後產生「選課意願卡」，截圖傳給教練。</span></div></button>
-  <button class="entry" data-go="browse"><div><b>直接瀏覽課程</b><span>已經知道要找什麼時，用程度和主題篩選。</span></div></button>
+  <button class="entry" data-go="coach"><div><b>依需求找課</b><span>回答幾個問題，推薦適合的課。</span></div></button>
+  <button class="entry" data-go="browse"><div><b>瀏覽全部課程</b><span>用程度和主題篩選。</span></div></button>
  </div>
  <p class="note" style="margin-top:20px">測試版：31 堂課都已收錄，課程說明為初稿。</p>`;
  app.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>start(b.dataset.go));
@@ -214,8 +213,8 @@ function results(){
  rerender=results;
  app.innerHTML=`<h1>推薦課程</h1><p class="lead">${coach?"勾選要排的課，再產生「課程安排卡」。":"勾選想上的課，再產生「選課意願卡」傳給教練。"}</p>
  <div class="stack">${list.length?list.map(l=>lessonCard(l,coach)).join(""):`<div class="empty">目前沒有符合的課程。可以回上一步多選幾個用途。</div>`}</div>
- <div class="actions"><button class="btn ghost" id="redo">重新確認需求</button></div>`;
- bindPick();$("#redo").onclick=()=>{S.step=0;needs();};bar();
+ <div class="actions"><button class="btn ghost" id="redo">重新回答問題</button><button class="btn ghost" id="home2">回首頁</button></div>`;
+ bindPick();$("#redo").onclick=()=>{S.step=0;needs();};$("#home2").onclick=home;bar();
 }
 
 /* ---------- 瀏覽 ---------- */
