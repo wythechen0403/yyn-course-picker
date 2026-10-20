@@ -70,7 +70,7 @@ label.f{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--mu
 .goal{font-size:14px}
 .ph{font-size:13px;color:var(--muted);font-style:italic}
 .links{display:flex;gap:8px;flex-wrap:wrap}
-.links a{font-size:13px;color:var(--ink);text-decoration:none;border:1px solid var(--line);padding:6px 12px;border-radius:8px}
+.links{align-items:center}.links a{font-size:13px;color:var(--ink);text-decoration:none;border:1px solid var(--line);padding:6px 12px;border-radius:8px}.links a.primary{background:var(--ink);color:var(--bg);border-color:var(--ink);font-size:15px;padding:10px 16px}.links .dl{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px;color:var(--muted)}.links .dl a{font-size:12.5px;padding:4px 10px}
 .pick{flex:none;font:inherit;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
 .pick[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 .bar{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -117,11 +117,11 @@ const LEVEL_DESC={
  Advanced:"能聽懂訪談、演講和電影對白，想練更精準的表達和觀點。"
 };
 const LESSONS=[
- {id:"B06",zh:"機場轉機",en:"Ready for Takeoff?",level:"Basic",themes:["travel"],goal:"轉機時開口問路、出示機票、找到登機門。",ph:"I need to change planes. ／ May I see your ticket?",pages:26,key:"1_Y7T-ZyHI69GLE2j8shJAsj1JGsn02wq",pptx:"1ZvfqRMTlNX6fJUd3SrPOreF_9cFGcxnF"},
- {id:"B05",zh:"餐廳點餐",en:"Ready to Order?",level:"Basic",themes:["travel","life"],goal:"點主餐、問今日特餐，選配菜和飲料。",ph:"What is today’s special? ／ I’ll have a baked potato.",pages:15,key:"1o7hGpFV6SVLST6RQLYQ1EzxZ1z7rpnhw",pptx:"1y-DlpquWrTojZYX3weXJdOjA3H4ed51j"},
- {id:"I06",zh:"聊暑假與家庭安排",en:"Long Summer Days",level:"Intermediate",themes:["social","life"],goal:"聊假期和孩子的安排，說出自己比較喜歡哪一種。",ph:"When it comes to holidays, I like … better.",pages:20,key:"1W4Vhd65ERvOgoDb4bklGJCilxIKEHxR2",pptx:"1n03xqgOlicesX5LoN0Ln5m4oIAZ0y7R3"},
- {id:"A04",zh:"哈利波特作者訪談",en:"Unmasking Harry Potter",level:"Advanced",themes:["culture"],goal:"聽懂作家訪談，練習說明原因、表達看法。",ph:"Basically, I believe the books provide dreams for people.",pages:14,key:"1Y4qrVcW7n2YATp-me-_JySfxibXpV_MV",pptx:"1k2R1uk5joHSdb9mQE_0KgiQd91D9aZ-2"},
- {id:"H02",zh:"餵養你的心智",en:"Feed Your Mind with Wisdom",level:"Seven Habits",themes:["grow"],goal:"談閱讀和自我成長，用英文說出自己的生活原則。",ph:"Your mind is like a garden.",pages:24,key:"1ojktjTUbyPc8wYP6XEaZgA3LjWc1JfmT",pptx:"1jZbCKwBHTkzwFH-fw1ARxRP0qndDYy4O"}
+ {id:"B06",pdf:"16ScLcZgTZc-5iJGVNS5bTa_HR_O2cdRv",zh:"機場轉機",en:"Ready for Takeoff?",level:"Basic",themes:["travel"],goal:"轉機時開口問路、出示機票、找到登機門。",ph:"I need to change planes. ／ May I see your ticket?",pages:26,key:"1_Y7T-ZyHI69GLE2j8shJAsj1JGsn02wq",pptx:"1ZvfqRMTlNX6fJUd3SrPOreF_9cFGcxnF"},
+ {id:"B05",pdf:"1al-q4oZJM8o4yM70gE0UutP9_E4McnAC",zh:"餐廳點餐",en:"Ready to Order?",level:"Basic",themes:["travel","life"],goal:"點主餐、問今日特餐，選配菜和飲料。",ph:"What is today’s special? ／ I’ll have a baked potato.",pages:15,key:"1o7hGpFV6SVLST6RQLYQ1EzxZ1z7rpnhw",pptx:"1y-DlpquWrTojZYX3weXJdOjA3H4ed51j"},
+ {id:"I06",pdf:"11TJBhuKhvNmuHERU2C5yLVfXXZtZfZoQ",zh:"聊暑假與家庭安排",en:"Long Summer Days",level:"Intermediate",themes:["social","life"],goal:"聊假期和孩子的安排，說出自己比較喜歡哪一種。",ph:"When it comes to holidays, I like … better.",pages:20,key:"1W4Vhd65ERvOgoDb4bklGJCilxIKEHxR2",pptx:"1n03xqgOlicesX5LoN0Ln5m4oIAZ0y7R3"},
+ {id:"A04",pdf:"1psPru6UkEBHqAIAllM-2RIWKoSUJmLxq",zh:"哈利波特作者訪談",en:"Unmasking Harry Potter",level:"Advanced",themes:["culture"],goal:"聽懂作家訪談，練習說明原因、表達看法。",ph:"Basically, I believe the books provide dreams for people.",pages:14,key:"1Y4qrVcW7n2YATp-me-_JySfxibXpV_MV",pptx:"1k2R1uk5joHSdb9mQE_0KgiQd91D9aZ-2"},
+ {id:"H02",pdf:"1yEaGgMCmnYItX0vOc-bpBhK14tlbP5Wu",zh:"餵養你的心智",en:"Feed Your Mind with Wisdom",level:"Seven Habits",themes:["grow"],goal:"談閱讀和自我成長，用英文說出自己的生活原則。",ph:"Your mind is like a garden.",pages:78,key:"1ojktjTUbyPc8wYP6XEaZgA3LjWc1JfmT",pptx:"1jZbCKwBHTkzwFH-fw1ARxRP0qndDYy4O"}
 ];
 const QUOTES={
  travel:[["Every trip starts with one brave sentence.","每段旅程，都從一句勇敢開口開始。"],["Ask once, and the world gets bigger.","敢開口問一次，世界就變大了。"]],
@@ -143,7 +143,7 @@ const $=s=>document.querySelector(s), app=$("#app");
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const isCoach=()=>S.mode==="coach"||S.mode==="browse";
 
-function fmtBtn(){const b=$("#fmtBtn");b.hidden=!(isCoach()&&FORMAT);b.textContent=FORMAT==="key"?"Keynote ⇄":"PPT ⇄";}
+function fmtBtn(){$("#fmtBtn").hidden=true;}
 $("#fmtBtn").onclick=()=>{FORMAT=FORMAT==="key"?"pptx":"key";store.set("yyn-format",FORMAT);fmtBtn();rerender&&rerender();};
 let rerender=null;
 
@@ -160,7 +160,7 @@ function home(){
  <p class="note" style="margin-top:20px">雛形：目前只放 5 堂試做課程，卡片內容為初稿。</p>`;
  app.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>start(b.dataset.go));
 }
-function start(m){S.mode=m;if(m!=="student"&&!FORMAT)return chooseFormat(()=>start(m));fmtBtn();m==="browse"?browse():needs();}
+function start(m){S.mode=m;fmtBtn();m==="browse"?browse():needs();}
 function chooseFormat(next){
  app.innerHTML=`<h1>教材用哪一種格式？</h1><p class="lead">之後課程卡上的教材連結只會顯示這個格式。這支裝置會記住你的選擇，右上角可以隨時切換。</p>
  <div class="stack"><button class="entry" data-f="key"><div><b>Keynote</b><span>Mac、iPad 上課用</span></div></button>
@@ -250,7 +250,7 @@ function lessonCard(l,showLinks){
   <div class="meta">${S.level&&l.level!=="Seven Habits"&&l.level!==S.level?`<span class="tg">程度不同</span>`:""}${l.themes.map(t=>`<span class="tg ${S.themes.includes(t)?"match":""}">${THEMES[t].e} ${THEMES[t].n}</span>`).join("")}<span class="tg">約 ${l.pages} 頁投影片</span></div>
   <div class="goal">${l.goal}<span class="draft">初稿</span></div>
   <div class="ph">${l.ph}</div>
-  ${showLinks?`<div class="links"><a href="https://drive.google.com/file/d/${id}/view" target="_blank" rel="noopener">開啟 ${FORMAT==="key"?"Keynote":"PPT"} 教材 ↗</a></div>`:""}
+  ${showLinks?`<div class="links"><a class="primary" href="https://drive.google.com/file/d/${l.pdf}/view" target="_blank" rel="noopener">看預覽（手機可看）↗</a><span class="dl">上課檔：<a href="https://drive.google.com/file/d/${l.key}/view" target="_blank" rel="noopener">Mac・Keynote</a><a href="https://drive.google.com/file/d/${l.pptx}/view" target="_blank" rel="noopener">Windows・PPT</a></span></div>`:""}
  </article>`;
 }
 function bindPick(){app.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>{const k=b.dataset.p;S.picked=S.picked.includes(k)?S.picked.filter(x=>x!==k):[...S.picked,k];rerender&&rerender();});}
@@ -358,7 +358,7 @@ async function draw(d){
  const by=bandY+88, bottom=H-12;
  x.fillStyle=th.band;
  const qy=bottom-15;
- x.globalAlpha=.75;x.font=`500 9.5px ${SERIF}`;x.fillText(fit(x,d.quote[0],W-28),14,qy);x.fillText(fit(x,d.quote[1],W-28),14,qy+14);x.globalAlpha=1;
+ x.globalAlpha=.75;d.quote.forEach((q,i)=>{let fs=9.5;x.font=`500 ${fs}px ${SERIF}`;while(x.measureText(q).width>W-28&&fs>7){fs-=.25;x.font=`500 ${fs}px ${SERIF}`;}x.fillText(fit(x,q,W-28),14,qy+i*14);});x.globalAlpha=1;
  if(!d.tall){
   x.font=`600 11.5px ${SERIF}`;x.fillText(fit(x,d.les1,W-28),14,by+20);
   x.font=`400 10px ${SANS}`;x.fillText(fit(x,`學員 ${d.student}・${d.arr?(d.coach?"教練 "+d.coach:"英語腦"):d.levelLine}`,W-28),14,by+36);
