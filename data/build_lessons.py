@@ -32,6 +32,16 @@ IDS={  # id: (key, pptx, pdf)
 "H06":("1MxbjP0kSsRpoRW9ncifRFuiPu6jUuph3","1GqeeQIlGh0OxQhwcta3NtoEedxP2aQ32","1rxR0opfVgb-7hFUK4fCoSJmsaxmiTQOl"),
 "H07":("1M9vqab-5aidbHQ1tSy8rXNR3fFgXdSa8","1x7gQzLJW7WzSMkqx7yfrKYlPe9VnJVE7","1OxP71XzgjASaDPK92dDXMetRniuC3gdR"),
 "H08":("1JFYqbzD7u5cRUT24ti8DhrrnT5uIwdSX","1pfiRYI-OGN4ilbtcpM9Xjw0wnyEO8plL","1ko9yufO0M5HXPgte05qT_97e_1GMLm8d"),
+"SB01":("1_Vvsg625HFKrnCCfpND1Xn9IyrxHBrrJ","1DxjMJ0euksTVsBl9FWffRzJKEGU4duil","1kE9k4-QLI4RIh2_W-J6kPOZjclAjksiC"),
+"SB02":("1aB43l0p6DvJAYWJsPqiyK5A9Bcyd2OKg","1FtBxTvjqsOUBJPEwsDhH0KWFR92mxbnP","1Yw6Q3MI3edTJvU0Zw_NwlTkVpVO_kMrq"),
+"SB03":("1S2Khuebs4nijVTAl44OC2ONqfP3_db-N","1ysiOFPEh0uYIQ4pWxiG-BVoUux3yBR-5","1qTFQZjDMK_raMyurzuZSOjqGfVwLrO-m"),
+"SB04":("1M-m_zdRVlqUVHhGW4ZKNT1nEF6iH_Rla","1lwFcbFBU8eLXyHPBinpSrb3bFqH_oTvl","1CNQ12sEB72IJRok3AyYYABce8UZlqPMR"),
+"SB05":("1LSP3zNHGsZsfqZdQlzQxTltWvmPgfgNj","1dcwIPQCoWOKuUfep03S8vdYt8xizyi5R","1m6s-xsU4dT29X4EnzQSvyPQjkJE3g6CP"),
+"SB06":("1ZOm9Kg09C7pn3Xmy_PmDBxsmmT6723cK","14LmlyZv7Cirt5uGPs3OMz0amrCHusPBM","1p-I-K5qFZID9l5EhrnQtLF7f-q_RVZcQ"),
+"SB07":("1TTiYkWJgeeVtgh-9w1lWIBtZ8J541N7H","1HZVx2XjF8Eksp8buj14-pldglM7RcYOG","1NEwe-vMYJJI7nDVUlJLVzMs7zeEt6Tba"),
+"SB08":("1DVZcfaeWhq0k2M94JJ2COVp-lWl9ezEl","1iKj81P5H7auJaysZ1Bh4p03QkSYCs_8E","1LEKj8cpSPkXwl71odE0Nwwto-WOjQIZK"),
+"SB09":("1Jd1kXEAOWxEvubBayPlEZiQiWTZsyKxK","1uh3HDS0NsAAJ-DeZQ4dfVFMt3bZuaEom","1Nsl8_XRf127aqtGCcXXKV4fHncifzzdV"),
+"SB10":("1NJ1BZypbgCS1mhq62pgkPtdeVkzq-L_a","1wi389e1PTCNA2F-0RjSPeqD9Z9PWl7CF","14LrNioPpP5tM-WfaJ9zHlT0m-Hk6vusm"),
 }
 L=[ # id, 中文名, 英文名, 程度, 主題, 學習目標, 例句, 頁數
 ("B01","做酪梨醬：食材與步驟","Let's Make Guacamole","Basic",["life"],"說出食材、份量和料理步驟。","First, chop the onion. ／ one and a half teaspoons",21),

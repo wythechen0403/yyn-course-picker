@@ -500,5 +500,170 @@
   "pages": 47,
   "key": "1JFYqbzD7u5cRUT24ti8DhrrnT5uIwdSX",
   "pptx": "1pfiRYI-OGN4ilbtcpM9Xjw0wnyEO8plL"
+ },
+ {
+  "id": "SB01",
+  "series": "Speaking",
+  "pdf": "1kE9k4-QLI4RIh2_W-J6kPOZjclAjksiC",
+  "zh": "自我介紹",
+  "en": "Self Introduction",
+  "level": "Basic",
+  "themes": [
+   "social"
+  ],
+  "goal": "在英文會話課第一堂和新同學互相自我介紹。",
+  "ph": "My name is ___ ／ I'm from ___",
+  "pages": 24,
+  "key": "1_Vvsg625HFKrnCCfpND1Xn9IyrxHBrrJ",
+  "pptx": "1DxjMJ0euksTVsBl9FWffRzJKEGU4duil"
+ },
+ {
+  "id": "SB02",
+  "series": "Speaking",
+  "pdf": "1Yw6Q3MI3edTJvU0Zw_NwlTkVpVO_kMrq",
+  "zh": "家鄉介紹",
+  "en": "Your Hometown",
+  "level": "Basic",
+  "themes": [
+   "social",
+   "culture"
+  ],
+  "goal": "帶同事回台南，介紹自己的家鄉和特色。",
+  "ph": "I grew up in ___ ／ ___ is known for ___",
+  "pages": 24,
+  "key": "1aB43l0p6DvJAYWJsPqiyK5A9Bcyd2OKg",
+  "pptx": "1FtBxTvjqsOUBJPEwsDhH0KWFR92mxbnP"
+ },
+ {
+  "id": "SB03",
+  "series": "Speaking",
+  "pdf": "1qTFQZjDMK_raMyurzuZSOjqGfVwLrO-m",
+  "zh": "個人喜好",
+  "en": "Your Favorites",
+  "level": "Basic",
+  "themes": [
+   "social"
+  ],
+  "goal": "第一次約會吃火鍋，聊彼此最喜歡的東西。",
+  "ph": "I love ___ ／ It makes me feel ___",
+  "pages": 24,
+  "key": "1S2Khuebs4nijVTAl44OC2ONqfP3_db-N",
+  "pptx": "1ysiOFPEh0uYIQ4pWxiG-BVoUux3yBR-5"
+ },
+ {
+  "id": "SB04",
+  "series": "Speaking",
+  "pdf": "1CNQ12sEB72IJRok3AyYYABce8UZlqPMR",
+  "zh": "日常作息",
+  "en": "Your Daily Routine",
+  "level": "Basic",
+  "themes": [
+   "life"
+  ],
+  "goal": "女兒寫英文作業，訪問爸爸平日的一天。",
+  "ph": "After ___ing, I ___ ／ It takes me ___",
+  "pages": 24,
+  "key": "1M-m_zdRVlqUVHhGW4ZKNT1nEF6iH_Rla",
+  "pptx": "1lwFcbFBU8eLXyHPBinpSrb3bFqH_oTvl"
+ },
+ {
+  "id": "SB05",
+  "series": "Speaking",
+  "pdf": "1m6s-xsU4dT29X4EnzQSvyPQjkJE3g6CP",
+  "zh": "週末生活",
+  "en": "Your Weekends",
+  "level": "Basic",
+  "themes": [
+   "life",
+   "social"
+  ],
+  "goal": "傍晚和孩子在公園散步，聊週末都在做什麼。",
+  "ph": "I tend to ___ ／ I end up ___ing",
+  "pages": 24,
+  "key": "1LSP3zNHGsZsfqZdQlzQxTltWvmPgfgNj",
+  "pptx": "1dcwIPQCoWOKuUfep03S8vdYt8xizyi5R"
+ },
+ {
+  "id": "SB06",
+  "series": "Speaking",
+  "pdf": "1p-I-K5qFZID9l5EhrnQtLF7f-q_RVZcQ",
+  "zh": "近期經歷",
+  "en": "Recent Experiences",
+  "level": "Basic",
+  "themes": [
+   "social",
+   "life"
+  ],
+  "goal": "午休和同事聊最近去了哪、吃了什麼、買了什麼。",
+  "ph": "I went to ___ ／ It was ___",
+  "pages": 24,
+  "key": "1ZOm9Kg09C7pn3Xmy_PmDBxsmmT6723cK",
+  "pptx": "14LmlyZv7Cirt5uGPs3OMz0amrCHusPBM"
+ },
+ {
+  "id": "SB07",
+  "series": "Speaking",
+  "pdf": "1NEwe-vMYJJI7nDVUlJLVzMs7zeEt6Tba",
+  "zh": "未來計畫",
+  "en": "Future Plans",
+  "level": "Basic",
+  "themes": [
+   "grow",
+   "social"
+  ],
+  "goal": "和老朋友在咖啡廳聊明年的旅行、存錢、工作和英文。",
+  "ph": "I'm planning to ___ ／ I'd like to ___",
+  "pages": 24,
+  "key": "1TTiYkWJgeeVtgh-9w1lWIBtZ8J541N7H",
+  "pptx": "1HZVx2XjF8Eksp8buj14-pldglM7RcYOG"
+ },
+ {
+  "id": "SB08",
+  "series": "Speaking",
+  "pdf": "1LEKj8cpSPkXwl71odE0Nwwto-WOjQIZK",
+  "zh": "外食與點餐",
+  "en": "Eating Out",
+  "level": "Basic",
+  "themes": [
+   "travel",
+   "life"
+  ],
+  "goal": "在舊金山的小餐館聊外食習慣，並實際練習點餐。",
+  "ph": "I'd say ___ ／ I'll have the ___",
+  "pages": 24,
+  "key": "1DVZcfaeWhq0k2M94JJ2COVp-lWl9ezEl",
+  "pptx": "1iKj81P5H7auJaysZ1Bh4p03QkSYCs_8E"
+ },
+ {
+  "id": "SB09",
+  "series": "Speaking",
+  "pdf": "1Nsl8_XRf127aqtGCcXXKV4fHncifzzdV",
+  "zh": "購物經驗",
+  "en": "Shopping",
+  "level": "Basic",
+  "themes": [
+   "life"
+  ],
+  "goal": "陪孩子逛百貨公司買球鞋，聊購物習慣和選擇。",
+  "ph": "I usually ___ ／ I'd go for ___",
+  "pages": 24,
+  "key": "1Jd1kXEAOWxEvubBayPlEZiQiWTZsyKxK",
+  "pptx": "1uh3HDS0NsAAJ-DeZQ4dfVFMt3bZuaEom"
+ },
+ {
+  "id": "SB10",
+  "series": "Speaking",
+  "pdf": "14LrNioPpP5tM-WfaJ9zHlT0m-Hk6vusm",
+  "zh": "職場意見",
+  "en": "Opinions at Work",
+  "level": "Basic",
+  "themes": [
+   "work"
+  ],
+  "goal": "新同事在茶水間向前輩打聽公司，練習表達看法。",
+  "ph": "I think it's ___, but ___",
+  "pages": 24,
+  "key": "1NJ1BZypbgCS1mhq62pgkPtdeVkzq-L_a",
+  "pptx": "1wi389e1PTCNA2F-0RjSPeqD9Z9PWl7CF"
  }
 ]
