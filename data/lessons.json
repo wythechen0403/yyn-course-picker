@@ -1,6 +1,7 @@
 [
  {
   "id": "B01",
+  "series": "一般課程",
   "pdf": "1Af3GdxFP0axNqA_rA3JuQy42vOpsah1X",
   "zh": "做酪梨醬：食材與步驟",
   "en": "Let's Make Guacamole",
@@ -16,6 +17,7 @@
  },
  {
   "id": "B02",
+  "series": "一般課程",
   "pdf": "1B-puFW1dsoUYmmcGRDLIdznZBx1i8LFf",
   "zh": "看醫生描述症狀",
   "en": "At the Hospital: Describing Symptoms",
@@ -32,6 +34,7 @@
  },
  {
   "id": "B03",
+  "series": "一般課程",
   "pdf": "132lpiYQLUqnK9_JPtpZf7nFTtxWLgON8",
   "zh": "電話訂購商品",
   "en": "I'd Like to Place an Order",
@@ -48,6 +51,7 @@
  },
  {
   "id": "B04",
+  "series": "一般課程",
   "pdf": "1rPfOKpPZy5ue5HV5_cJuZVv696guAT5z",
   "zh": "問卷結果與決策",
   "en": "What Did People Think?",
@@ -63,6 +67,7 @@
  },
  {
   "id": "B05",
+  "series": "一般課程",
   "pdf": "1al-q4oZJM8o4yM70gE0UutP9_E4McnAC",
   "zh": "餐廳點餐",
   "en": "Ready to Order?",
@@ -79,6 +84,7 @@
  },
  {
   "id": "B06",
+  "series": "一般課程",
   "pdf": "16ScLcZgTZc-5iJGVNS5bTa_HR_O2cdRv",
   "zh": "機場轉機",
   "en": "Ready for Takeoff?",
@@ -94,6 +100,7 @@
  },
  {
   "id": "B07",
+  "series": "一般課程",
   "pdf": "1SvEYecEI_P3B3p1Wr2WtuQfXO4MeSgNm",
   "zh": "距離、身高、重量換算",
   "en": "How Far? How Tall? How Heavy?",
@@ -110,6 +117,7 @@
  },
  {
   "id": "I01",
+  "series": "一般課程",
   "pdf": "1ZiADa5ahnzsxJHJWxFlBVUuxyRbMG58m",
   "zh": "美女與野獸（一）",
   "en": "Make Your Small Corner Feel Big",
@@ -125,6 +133,7 @@
  },
  {
   "id": "I02",
+  "series": "一般課程",
   "pdf": "1qpQve19xnlaSdNW5j07CQeV5h1jHtQPT",
   "zh": "美女與野獸（二）",
   "en": "A Bold Claim: She's My Future Wife",
@@ -140,6 +149,7 @@
  },
  {
   "id": "I03",
+  "series": "一般課程",
   "pdf": "1g3xWJqi5TYcymh2hDfTFrcFd6JSV13Im",
   "zh": "貓狗大不同",
   "en": "Dogs, Cats, and What Makes Them Happy",
@@ -155,6 +165,7 @@
  },
  {
   "id": "I04",
+  "series": "一般課程",
   "pdf": "1-vRHpe0FkBdo_oagvxak8gVBB9REAZ7x",
   "zh": "歐洲旅行計畫",
   "en": "Ready to Explore Europe?",
@@ -170,6 +181,7 @@
  },
  {
   "id": "I05",
+  "series": "一般課程",
   "pdf": "1FUzzPaDzXLzbJTLc3vIqKPYEHQSMRcoZ",
   "zh": "銀行換匯",
   "en": "Ready to Exchange?",
@@ -185,6 +197,7 @@
  },
  {
   "id": "I06",
+  "series": "一般課程",
   "pdf": "11TJBhuKhvNmuHERU2C5yLVfXXZtZfZoQ",
   "zh": "聊暑假與家庭安排",
   "en": "Long Summer Days",
@@ -201,6 +214,7 @@
  },
  {
   "id": "I07",
+  "series": "一般課程",
   "pdf": "1V92KAl9hhjKzeRRijBUGkPuSPduTu-Kj",
   "zh": "領養貓咪的故事",
   "en": "How Gigi Found a Home",
@@ -216,6 +230,7 @@
  },
  {
   "id": "I08",
+  "series": "一般課程",
   "pdf": "1bPe_a7noAEJmsObNgCDU-VyAZ2pdRJMM",
   "zh": "第一次看相撲",
   "en": "Seeing Sumo for the First Time",
@@ -231,6 +246,7 @@
  },
  {
   "id": "I09",
+  "series": "一般課程",
   "pdf": "1OUQpneCSEx4BKNMOFIJooY2N-njUuzZH",
   "zh": "第一次看太鼓",
   "en": "Seeing Taiko for the First Time",
@@ -246,6 +262,7 @@
  },
  {
   "id": "I10",
+  "series": "一般課程",
   "pdf": "1f6441vHoWRijnowc-7Ko1SriG-iiniAt",
   "zh": "玩具總動員 4：叉奇登場",
   "en": "Meet Forky!",
@@ -261,6 +278,7 @@
  },
  {
   "id": "A01",
+  "series": "一般課程",
   "pdf": "1ULQCKh96KTmdPyO-OMBz1WmkiUNGP6LI",
   "zh": "大英雄天團與可可夜總會",
   "en": "Robots & Guitars: A Tale of Two Worlds",
@@ -276,6 +294,7 @@
  },
  {
   "id": "A02",
+  "series": "一般課程",
   "pdf": "16PrlnBcokdN0rzTWmKKJyPPUkOLFRvVU",
   "zh": "聊八卦（一）",
   "en": "Spill the Tea: Let's Talk About Gossip",
@@ -291,6 +310,7 @@
  },
  {
   "id": "A03",
+  "series": "一般課程",
   "pdf": "1b8hSeGyN9JkyFw7Ul45DBfG5biQ2EUI6",
   "zh": "聊八卦（二）：轉述的文法",
   "en": "Did You Hear What Happened?",
@@ -306,6 +326,7 @@
  },
  {
   "id": "A04",
+  "series": "一般課程",
   "pdf": "1psPru6UkEBHqAIAllM-2RIWKoSUJmLxq",
   "zh": "哈利波特作者訪談",
   "en": "Unmasking Harry Potter",
@@ -321,6 +342,7 @@
  },
  {
   "id": "A05",
+  "series": "一般課程",
   "pdf": "1fFGdIktlwteKanS4dRC5ngas23VbVg0b",
   "zh": "相撲：不只是運動",
   "en": "Sumo: More Than Just a Sport",
@@ -336,6 +358,7 @@
  },
  {
   "id": "A06",
+  "series": "一般課程",
   "pdf": "1e-k-8Mo_FZdQ7t6SVWYtyLbtY_eMZIAj",
   "zh": "TED：幸福在哪裡",
   "en": "Where Is Happiness?",
@@ -351,10 +374,11 @@
  },
  {
   "id": "H01",
+  "series": "Seven Habits",
   "pdf": "16CpNujY4iFZXMVa14WaMvloRoLlPZMfJ",
   "zh": "在一天開始前先規劃",
   "en": "Plan Your Day Before It Begins",
-  "level": "Seven Habits",
+  "level": "不分程度",
   "themes": [
    "grow"
   ],
@@ -366,10 +390,11 @@
  },
  {
   "id": "H02",
+  "series": "Seven Habits",
   "pdf": "1yEaGgMCmnYItX0vOc-bpBhK14tlbP5Wu",
   "zh": "餵養你的心智",
   "en": "Feed Your Mind with Wisdom",
-  "level": "Seven Habits",
+  "level": "不分程度",
   "themes": [
    "grow"
   ],
@@ -381,10 +406,11 @@
  },
  {
   "id": "H03",
+  "series": "Seven Habits",
   "pdf": "1L8QAoGOR7dT_5LAiMWHcO-6wM-FshuL_",
   "zh": "讓身體動起來",
   "en": "Move Your Body",
-  "level": "Seven Habits",
+  "level": "不分程度",
   "themes": [
    "grow"
   ],
@@ -396,10 +422,11 @@
  },
  {
   "id": "H04",
+  "series": "Seven Habits",
   "pdf": "1-ujGfjksna1gribuFy_gmNmFxVqEtZaq",
   "zh": "每天回顧目標",
   "en": "Review Your Goals Daily",
-  "level": "Seven Habits",
+  "level": "不分程度",
   "themes": [
    "grow"
   ],
@@ -411,10 +438,11 @@
  },
  {
   "id": "H05",
+  "series": "Seven Habits",
   "pdf": "1eMz3qa9GXOn3JvP5SSyK3TyVcclDiJ3r",
   "zh": "把感恩變成每日功課",
   "en": "Make Gratitude a Daily Discipline",
-  "level": "Seven Habits",
+  "level": "不分程度",
   "themes": [
    "grow"
   ],
@@ -426,10 +454,11 @@
  },
  {
   "id": "H06",
+  "series": "Seven Habits",
   "pdf": "1rxR0opfVgb-7hFUK4fCoSJmsaxmiTQOl",
   "zh": "說話帶著目的與正向",
   "en": "Speak with Purpose and Positivity",
-  "level": "Seven Habits",
+  "level": "不分程度",
   "themes": [
    "grow",
    "social"
@@ -442,10 +471,11 @@
  },
  {
   "id": "H07",
+  "series": "Seven Habits",
   "pdf": "1OxP71XzgjASaDPK92dDXMetRniuC3gdR",
   "zh": "反思、修正、準備",
   "en": "Reflect, Refine, Prepare",
-  "level": "Seven Habits",
+  "level": "不分程度",
   "themes": [
    "grow"
   ],
@@ -457,10 +487,11 @@
  },
  {
   "id": "H08",
+  "series": "Seven Habits",
   "pdf": "1ko9yufO0M5HXPgte05qT_97e_1GMLm8d",
   "zh": "總複習：小習慣，大人生",
   "en": "Small Habits, Big Life",
-  "level": "Seven Habits",
+  "level": "不分程度",
   "themes": [
    "grow"
   ],

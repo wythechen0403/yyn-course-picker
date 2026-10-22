@@ -57,17 +57,29 @@ L=[ # id, 中文名, 英文名, 程度, 主題, 學習目標, 例句, 頁數
 ("A04","哈利波特作者訪談","Unmasking Harry Potter","Advanced",["culture"],"聽懂作家訪談，練習說明原因、表達看法。","Basically, I believe the books provide dreams for people.",14),
 ("A05","相撲：不只是運動","Sumo: More Than Just a Sport","Advanced",["culture"],"描述一種文化的儀式和意義。","It was a combination of entertainment and ritual.",14),
 ("A06","TED：幸福在哪裡","Where Is Happiness?","Advanced",["grow"],"聽懂 TED 演講的論證，談幸福和觀點。","So is happiness in the object?",18),
-("H01","在一天開始前先規劃","Plan Your Day Before It Begins","Seven Habits",["grow"],"談時間規劃，用英文說出自己的每日計畫。","If you don't plan your life, someone else will.",47),
-("H02","餵養你的心智","Feed Your Mind with Wisdom","Seven Habits",["grow"],"談閱讀和自我成長，用英文說出自己的生活原則。","Your mind is like a garden.",78),
-("H03","讓身體動起來","Move Your Body","Seven Habits",["grow"],"談運動和精力，說出自己的運動習慣。","When your body moves, your goals come alive.",43),
-("H04","每天回顧目標","Review Your Goals Daily","Seven Habits",["grow"],"談目標設定，說出自己的目標和提醒方法。","The future belongs to those who prepare for it.",26),
-("H05","把感恩變成每日功課","Make Gratitude a Daily Discipline","Seven Habits",["grow"],"用英文表達感謝，談心態的轉換。","Focus on your blessings.",26),
-("H06","說話帶著目的與正向","Speak with Purpose and Positivity","Seven Habits",["grow","social"],"練習正向表達，換掉抱怨和批評的說法。","Use your words to build belief.",38),
-("H07","反思、修正、準備","Reflect, Refine, Prepare","Seven Habits",["grow"],"回顧一天，說出明天要調整什麼。","Reflect on today. Prepare for tomorrow.",38),
-("H08","總複習：小習慣，大人生","Small Habits, Big Life","Seven Habits",["grow"],"串起七個習慣，說出自己的改變計畫。","Small habits, big life.",47),
+("H01","在一天開始前先規劃","Plan Your Day Before It Begins","不分程度",["grow"],"談時間規劃，用英文說出自己的每日計畫。","If you don't plan your life, someone else will.",47),
+("H02","餵養你的心智","Feed Your Mind with Wisdom","不分程度",["grow"],"談閱讀和自我成長，用英文說出自己的生活原則。","Your mind is like a garden.",78),
+("H03","讓身體動起來","Move Your Body","不分程度",["grow"],"談運動和精力，說出自己的運動習慣。","When your body moves, your goals come alive.",43),
+("H04","每天回顧目標","Review Your Goals Daily","不分程度",["grow"],"談目標設定，說出自己的目標和提醒方法。","The future belongs to those who prepare for it.",26),
+("H05","把感恩變成每日功課","Make Gratitude a Daily Discipline","不分程度",["grow"],"用英文表達感謝，談心態的轉換。","Focus on your blessings.",26),
+("H06","說話帶著目的與正向","Speak with Purpose and Positivity","不分程度",["grow","social"],"練習正向表達，換掉抱怨和批評的說法。","Use your words to build belief.",38),
+("H07","反思、修正、準備","Reflect, Refine, Prepare","不分程度",["grow"],"回顧一天，說出明天要調整什麼。","Reflect on today. Prepare for tomorrow.",38),
+("H08","總複習：小習慣，大人生","Small Habits, Big Life","不分程度",["grow"],"串起七個習慣，說出自己的改變計畫。","Small habits, big life.",47),
+("SB01","自我介紹","Self Introduction","Basic",["social"],"在英文會話課第一堂和新同學互相自我介紹。","My name is ___ ／ I'm from ___",24),
+("SB02","家鄉介紹","Your Hometown","Basic",["social","culture"],"帶同事回台南，介紹自己的家鄉和特色。","I grew up in ___ ／ ___ is known for ___",24),
+("SB03","個人喜好","Your Favorites","Basic",["social"],"第一次約會吃火鍋，聊彼此最喜歡的東西。","I love ___ ／ It makes me feel ___",24),
+("SB04","日常作息","Your Daily Routine","Basic",["life"],"女兒寫英文作業，訪問爸爸平日的一天。","After ___ing, I ___ ／ It takes me ___",24),
+("SB05","週末生活","Your Weekends","Basic",["life","social"],"傍晚和孩子在公園散步，聊週末都在做什麼。","I tend to ___ ／ I end up ___ing",24),
+("SB06","近期經歷","Recent Experiences","Basic",["social","life"],"午休和同事聊最近去了哪、吃了什麼、買了什麼。","I went to ___ ／ It was ___",24),
+("SB07","未來計畫","Future Plans","Basic",["grow","social"],"和老朋友在咖啡廳聊明年的旅行、存錢、工作和英文。","I'm planning to ___ ／ I'd like to ___",24),
+("SB08","外食與點餐","Eating Out","Basic",["travel","life"],"在舊金山的小餐館聊外食習慣，並實際練習點餐。","I'd say ___ ／ I'll have the ___",24),
+("SB09","購物經驗","Shopping","Basic",["life"],"陪孩子逛百貨公司買球鞋，聊購物習慣和選擇。","I usually ___ ／ I'd go for ___",24),
+("SB10","職場意見","Opinions at Work","Basic",["work"],"新同事在茶水間向前輩打聽公司，練習表達看法。","I think it's ___, but ___",24),
 ]
 out=[]
 for i,zh,en,lv,th,goal,ph,pages in L:
-    k,p,d=IDS[i]; out.append(dict(id=i,pdf=d,zh=zh,en=en,level=lv,themes=th,goal=goal,ph=ph,pages=pages,key=k,pptx=p))
+    if i not in IDS: print("缺少 Drive ID:",i); continue
+    k,p,d=IDS[i]; series="Seven Habits" if i.startswith("H") else "Speaking" if i.startswith("S") else "一般課程"
+    out.append(dict(id=i,series=series,pdf=d,zh=zh,en=en,level=lv,themes=th,goal=goal,ph=ph,pages=pages,key=k,pptx=p))
 json.dump(out,open("data/lessons.json","w",encoding="utf-8"),ensure_ascii=False,indent=1)
 print(len(out))
