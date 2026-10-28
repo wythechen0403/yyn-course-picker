@@ -1,4 +1,4 @@
-# 產生 31 堂課的資料（卡片文字為初稿），輸出 data/lessons.json
+# 產生課程資料（卡片文字為初稿），輸出 data/lessons.json
 import json
 IDS={  # id: (key, pptx, pdf)
 "B01":("1dD51oEBz6I9tFeCjc4tsqemIwsxhjirr","1qt-d9SLknKfSaq5fGG3Q8hMBFCutlY6h","1Af3GdxFP0axNqA_rA3JuQy42vOpsah1X"),
@@ -85,6 +85,16 @@ L=[ # id, 中文名, 英文名, 程度, 主題, 學習目標, 例句, 頁數
 ("SB08","外食與點餐","Eating Out","Basic",["travel","life"],"在舊金山的小餐館聊外食習慣，並實際練習點餐。","I'd say ___ ／ I'll have the ___",24),
 ("SB09","購物經驗","Shopping","Basic",["life"],"陪孩子逛百貨公司買球鞋，聊購物習慣和選擇。","I usually ___ ／ I'd go for ___",24),
 ("SB10","職場意見","Opinions at Work","Basic",["work"],"新同事在茶水間向前輩打聽公司，練習表達看法。","I think it's ___, but ___",24),
+("SI01","自我介紹與工作說明","Self Introduction","Intermediate",["work","social"],"合作案開完會和窗口吃午餐，介紹自己和負責的工作。","I work at ___ ／ I'm responsible for ___",24),
+("SI02","職涯經歷","Career Story","Intermediate",["work"],"外商第二輪面試，說明過去的工作經歷和轉職原因。","I used to ___ ／ I worked there for ___",24),
+("SI03","旅行經驗","Travel Experience","Intermediate",["travel","social"],"和朋友翻旅行照片，分享去過哪裡、遇到什麼事。","I've been to ___ ／ I was so ___",24),
+("SI04","優點與弱點","Strengths & Weaknesses","Intermediate",["work","grow"],"和導師聊自己的優點、弱點和改進方法。","I sometimes get ___ ／ I tend to ___",24),
+("SI05","工作日常","A Typical Workday","Intermediate",["work","life"],"用頻率副詞描述在家工作的一天。","I always ___ ／ I usually ___",25),
+("SI06","解決問題","Solving Problems","Intermediate",["work","life"],"家庭晚餐聊工作上遇到的問題和解決方法。","I solve it by ___ ／ I ask ___ for ___",25),
+("SI07","會議發言","Speaking in Meetings","Intermediate",["work"],"會議中表達意見、確認沒聽懂的地方。","When I don't understand, I say ___",24),
+("SI08","閒聊與文化差異","Small Talk & Culture","Intermediate",["social","culture"],"和外國同事閒聊，比較台灣和國外的文化差異。","I used to think ___ ／ Turns out, ___",24),
+("SI09","團隊管理","Team & Workplace","Intermediate",["work"],"新手主管請教前輩，練習分配工作和帶人的說法。","I assign ___ ___ ／ I ask ___ to ___",25),
+("SI10","提案與想法","Ideas & Proposals","Intermediate",["work"],"腦力激盪時用 could 客氣地提出建議和想法。","We could ___ ／ That could ___",25),
 ]
 out=[]
 for i,zh,en,lv,th,goal,ph,pages in L:
