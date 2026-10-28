@@ -665,5 +665,171 @@
   "pages": 24,
   "key": "1NJ1BZypbgCS1mhq62pgkPtdeVkzq-L_a",
   "pptx": "1wi389e1PTCNA2F-0RjSPeqD9Z9PWl7CF"
+ },
+ {
+  "id": "SI01",
+  "series": "Speaking",
+  "pdf": "1-Jw9hD_kqwr62I8twsVEmrvAVN04EyzD",
+  "zh": "自我介紹與工作說明",
+  "en": "Self Introduction",
+  "level": "Intermediate",
+  "themes": [
+   "work",
+   "social"
+  ],
+  "goal": "合作案開完會和窗口吃午餐，介紹自己和負責的工作。",
+  "ph": "I work at ___ ／ I'm responsible for ___",
+  "pages": 24,
+  "key": "1rYKsBKhzJcSeWMPVFRuHY2WaAhpLDiWv",
+  "pptx": "1sRVHokRomSRb-A4tdAXoYACPcuu2msCX"
+ },
+ {
+  "id": "SI02",
+  "series": "Speaking",
+  "pdf": "1KmNiQdD8yQSckUf9IbAFjj-OhXchTG3v",
+  "zh": "職涯經歷",
+  "en": "Career Story",
+  "level": "Intermediate",
+  "themes": [
+   "work"
+  ],
+  "goal": "外商第二輪面試，說明過去的工作經歷和轉職原因。",
+  "ph": "I used to ___ ／ I worked there for ___",
+  "pages": 24,
+  "key": "1OFJ-pdmW5sNDgy6wlOVlx9bs306KSPYl",
+  "pptx": "1ehIio4aD7vTu40Ufl1QRFldL-GGZZkfT"
+ },
+ {
+  "id": "SI03",
+  "series": "Speaking",
+  "pdf": "10kIpuse_cpYWdSjN9j4GnGFb3vnXzP8_",
+  "zh": "旅行經驗",
+  "en": "Travel Experience",
+  "level": "Intermediate",
+  "themes": [
+   "travel",
+   "social"
+  ],
+  "goal": "和朋友翻旅行照片，分享去過哪裡、遇到什麼事。",
+  "ph": "I've been to ___ ／ I was so ___",
+  "pages": 24,
+  "key": "1PwGxwJ9FXk_Am-GCJUzz2vHyYvFJjjdj",
+  "pptx": "1MM_2___oqSObozdwkUk4qTOon_W6nNwm"
+ },
+ {
+  "id": "SI04",
+  "series": "Speaking",
+  "pdf": "13awNqLSH66IKE8Vcx2DZGXSzFLnxwnFd",
+  "zh": "優點與弱點",
+  "en": "Strengths & Weaknesses",
+  "level": "Intermediate",
+  "themes": [
+   "work",
+   "grow"
+  ],
+  "goal": "和導師聊自己的優點、弱點和改進方法。",
+  "ph": "I sometimes get ___ ／ I tend to ___",
+  "pages": 24,
+  "key": "1XpnR_SSLVwlqME1XAtMj7ozQrVoX8w4Z",
+  "pptx": "1Ojpb0z7jyJh3-3Qgfta_1Z9ScJAEn9aa"
+ },
+ {
+  "id": "SI05",
+  "series": "Speaking",
+  "pdf": "1yn-SvDTu0K69BG25UR1S7d4g9njXFpTx",
+  "zh": "工作日常",
+  "en": "A Typical Workday",
+  "level": "Intermediate",
+  "themes": [
+   "work",
+   "life"
+  ],
+  "goal": "用頻率副詞描述在家工作的一天。",
+  "ph": "I always ___ ／ I usually ___",
+  "pages": 25,
+  "key": "1TqAmDelRVz57NzQjudL3r98lwKtOyW12",
+  "pptx": "1sUmazKXyoYe2U0Xrceb7iR0I7PZeDmBP"
+ },
+ {
+  "id": "SI06",
+  "series": "Speaking",
+  "pdf": "1yefdFBd-F4Lbves7ok8Osvt63hjVynbd",
+  "zh": "解決問題",
+  "en": "Solving Problems",
+  "level": "Intermediate",
+  "themes": [
+   "work",
+   "life"
+  ],
+  "goal": "家庭晚餐聊工作上遇到的問題和解決方法。",
+  "ph": "I solve it by ___ ／ I ask ___ for ___",
+  "pages": 25,
+  "key": "1cQ9Dmfzd6qvXs9cF6nJyfBh5_U23pWjG",
+  "pptx": "17NxuqGf6iVtR8Nr2m2VGQo7XP7-wK2ww"
+ },
+ {
+  "id": "SI07",
+  "series": "Speaking",
+  "pdf": "1kPKnUmE4Zmx52PqwNgcEMbfeTizXIcko",
+  "zh": "會議發言",
+  "en": "Speaking in Meetings",
+  "level": "Intermediate",
+  "themes": [
+   "work"
+  ],
+  "goal": "會議中表達意見、確認沒聽懂的地方。",
+  "ph": "When I don't understand, I say ___",
+  "pages": 24,
+  "key": "1r8ul0ATafqIfbCDjqW996XCFmBQthwrv",
+  "pptx": "1l0xcvzSOTLbOrMMIYMF3XpNQ4_eGoA_S"
+ },
+ {
+  "id": "SI08",
+  "series": "Speaking",
+  "pdf": "1G_bgJ6xl3gOg0d14CQRBUa2-k5ooIE1A",
+  "zh": "閒聊與文化差異",
+  "en": "Small Talk & Culture",
+  "level": "Intermediate",
+  "themes": [
+   "social",
+   "culture"
+  ],
+  "goal": "和外國同事閒聊，比較台灣和國外的文化差異。",
+  "ph": "I used to think ___ ／ Turns out, ___",
+  "pages": 24,
+  "key": "16t0pLf4tRtckXBu3-HFGbiwU7LFJCInt",
+  "pptx": "1Q2u86rXUOUIFx39DMD8BdXACXKuRTYsR"
+ },
+ {
+  "id": "SI09",
+  "series": "Speaking",
+  "pdf": "1eF8JhnP7Rfw0iLh41fR1He0bwofHNJ-Y",
+  "zh": "團隊管理",
+  "en": "Team & Workplace",
+  "level": "Intermediate",
+  "themes": [
+   "work"
+  ],
+  "goal": "新手主管請教前輩，練習分配工作和帶人的說法。",
+  "ph": "I assign ___ ___ ／ I ask ___ to ___",
+  "pages": 25,
+  "key": "1-I1rVL6g9xNRlbTb2tSaxefU_tESGlaO",
+  "pptx": "1udAwZWFHK6b4se4v6V_natFqi3_-9igI"
+ },
+ {
+  "id": "SI10",
+  "series": "Speaking",
+  "pdf": "17Q5JrHFrBujLE_IW7phFyqhLj-h9n2NH",
+  "zh": "提案與想法",
+  "en": "Ideas & Proposals",
+  "level": "Intermediate",
+  "themes": [
+   "work"
+  ],
+  "goal": "腦力激盪時用 could 客氣地提出建議和想法。",
+  "ph": "We could ___ ／ That could ___",
+  "pages": 25,
+  "key": "1WhGSACcSTe33NcVuaYFrrkSkC0nu0Hqy",
+  "pptx": "1edpc3GZJeFsogxP-jUCb6wtGJep7eHc0"
  }
 ]
